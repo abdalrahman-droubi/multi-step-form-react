@@ -1,0 +1,35 @@
+.SubscriptionPage_sideBar {
+  background-image: url("../../images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  /* height: 100%; */
+  flex: 0 1 275px;
+  padding: 35px 50px;
+}
+.SubscriptionPage_sideBar > .stepContainers {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  text-transform: uppercase;
+}
+.stepName {
+  font-weight: 700;
+}
+.StepIcon {
+  background-color: hsl(243, 100%, 62%);
+  border: 1px solid white;
+  border-radius: 100%;
+  font-size: 16px;
+  /* padding: 7px 0; */
+  text-align: center;
+  padding: 4% 0;
+  width: 35px;
+  /* flex: 0 0 39px; */
+}
+.StepIcon.active {
+  background-color: hsl(206, 94%, 87%);
+  color: rgba(18, 51, 94, 255);
+}

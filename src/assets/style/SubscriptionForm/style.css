@@ -1,0 +1,29 @@
+.mainContainer {
+  background-color: hsl(217, 100%, 97%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SubscriptionPage_container {
+  width: 1440px;
+  height: 630px;
+  display: flex;
+  align-items: stretch;
+  background-color: white;
+  border-radius: 25px;
+  padding: 25px;
+  gap: 10px;
+}
+.SubscriptionPage_formContainer {
+  margin: 0 auto;
+  flex: 0 1 500px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.buttonsContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
