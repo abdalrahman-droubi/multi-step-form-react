@@ -1,7 +1,6 @@
 .SubscriptionPage_formContainer .personalInfoForm {
   display: flex;
   flex-direction: column;
-
   gap: 50px;
   padding: 45px 0px;
   color: rgba(18, 51, 94, 255);

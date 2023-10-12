@@ -1,19 +1,17 @@
 import PropTypes from "prop-types";
 
-function StepsHeader(children) {
+function StepsHeader({ title, description }) {
   return (
     <div className="formHeader">
-      <h1 className="formTitle">Personal info{children.title}</h1>
-      <p>
-        please provide your name, email, address, and phone number
-        {children.description}
-      </p>
+      <h1 className="formTitle">{title}</h1>
+      <p>{description}</p>
     </div>
   );
 }
 
 StepsHeader.propTypes = {
-  children: PropTypes.object,
+  title: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default StepsHeader;

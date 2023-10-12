@@ -8,17 +8,11 @@ function Step1({ personalInfo, setPersonalInfo, errors }) {
 
   return (
     <section className="personalInfoForm">
-      <div className="formHeader">
-        <h1 className="formTitle">Personal info</h1>
-        <p>please provide your name, email, address, and phone number</p>
-      </div>
-      <StepsHeader>
-        {{
-          title: "Personal info",
-          description:
-            "please provide your name, email, address, and phone number",
-        }}
-      </StepsHeader>
+      <StepsHeader
+        title="Personal info"
+        description="please provide your name, email, address, and phone number"
+      />
+
       <form>
         <div className="formField">
           <div className="label">

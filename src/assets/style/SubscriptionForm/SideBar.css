@@ -32,4 +32,5 @@
 .StepIcon.active {
   background-color: hsl(206, 94%, 87%);
   color: rgba(18, 51, 94, 255);
+  border: 1px solid hsl(243, 100%, 62%);
 }

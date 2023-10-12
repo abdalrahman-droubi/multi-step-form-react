@@ -9,11 +9,7 @@ function SideBar({ activeStep }) {
         return (
           <div key={index} className="stepContainers">
             <span
-              className={
-                activeStep > 0 && index + 1 <= activeStep
-                  ? "StepIcon active"
-                  : "StepIcon"
-              }
+              className={index === activeStep ? "StepIcon active" : "StepIcon"}
             >
               {index + 1}
             </span>
