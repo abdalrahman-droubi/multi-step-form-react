@@ -18,8 +18,13 @@ export const validationRules = {
   ],
   phoneNumber: [
     {
+      validator: (value) => /^07\d{8}$/.test(value),
+      message:
+        "Invalid phone number. It should consist of 10 digits and start with 07.",
+    },
+    {
       validator: (value) => !!value,
-      message: "Phone number is required.",
+      message: "Invalid Phone number.",
     },
   ],
 };

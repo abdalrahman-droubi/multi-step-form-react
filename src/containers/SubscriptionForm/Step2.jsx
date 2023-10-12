@@ -9,8 +9,7 @@ function Step2({
   setSlectedPlan,
   subscriptionType,
   setSubscriptionType,
-  toggle,
-  setToggel,
+  setSelectedAddOns,
 }) {
   const handleSelectPlan = (index) => {
     setSlectedPlan((preSelected) => (preSelected === index ? null : index));
@@ -20,6 +19,7 @@ function Step2({
     setSubscriptionType((preType) =>
       preType === "yearly" ? "monthly" : "yearly"
     );
+    setSelectedAddOns([]);
   };
   return (
     <section className="selectPlanForm">
@@ -45,9 +45,8 @@ function Step2({
           <input
             type="checkbox"
             id="switch"
-            checked={toggle}
-            onChange={(e) => setToggel(e.target.checked)}
-            onClick={() => handlesubscriptionType()}
+            checked={subscriptionType === "monthly" ? false : true}
+            onChange={() => handlesubscriptionType()}
           />
           <label htmlFor="switch">Toggle</label>
         </span>
@@ -62,8 +61,7 @@ Step2.propTypes = {
   setSlectedPlan: PropTypes.any,
   subscriptionType: PropTypes.string,
   setSubscriptionType: PropTypes.func,
-  toggle: PropTypes.bool,
-  setToggel: PropTypes.func,
+  setSelectedAddOns: PropTypes.func,
 };
 
 export default Step2;

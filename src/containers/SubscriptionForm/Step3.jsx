@@ -2,7 +2,25 @@ import PropTypes from "prop-types";
 import StepsHeader from "../../components/StepsHeader";
 import "../../assets/style/SubscriptionForm/Step3.css";
 import { addOnsData } from "../../assets/Data/add-onsData.js";
-function Step3({ subscriptionType }) {
+import AddOnsCard from "../../components/AddOnsCard";
+
+function Step3({ subscriptionType, selectedAddOns, setSelectedAddOns }) {
+  const handleSelectedAddOns = (onsSelected) => {
+    setSelectedAddOns((preData) => {
+      if (preData.includes(onsSelected)) {
+        return preData.filter((ele) => {
+          if (ele === onsSelected) {
+            return false;
+          } else {
+            return true;
+          }
+        });
+      } else {
+        return [...preData, onsSelected];
+      }
+    });
+  };
+
   return (
     <section className="addOnsForm">
       <StepsHeader
@@ -11,22 +29,12 @@ function Step3({ subscriptionType }) {
       />
       <form className="checkBoxForm">
         {addOnsData[subscriptionType].map((addOns, index) => (
-          <label
-            className="chexkBoxContainer"
-            htmlFor={addOns.name}
+          <AddOnsCard
             key={index}
-          >
-            <div>
-              <input type="checkbox" id={addOns.name} />
-              <span>
-                <h4 htmlFor={addOns.name}>{addOns.name}</h4>
-                <div htmlFor={addOns.name} className="description">
-                  {addOns.description}
-                </div>
-              </span>
-            </div>
-            <span>{addOns.price}</span>
-          </label>
+            addOns={addOns}
+            onChange={handleSelectedAddOns}
+            selectedAddOns={selectedAddOns}
+          />
         ))}
       </form>
     </section>
@@ -35,6 +43,8 @@ function Step3({ subscriptionType }) {
 
 Step3.propTypes = {
   subscriptionType: PropTypes.string,
+  selectedAddOns: PropTypes.array,
+  setSelectedAddOns: PropTypes.func,
 };
 
 export default Step3;

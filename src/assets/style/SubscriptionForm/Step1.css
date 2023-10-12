@@ -36,6 +36,7 @@
 .formField > .label {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 .formField > .label > p {
   display: none;
@@ -44,6 +45,8 @@
 .formField > .label > .error {
   display: block;
   color: red;
+  flex: 0 1 50%;
+  text-align: end;
 }
 .personalInfoForm .formField > input.error {
   border-color: red;

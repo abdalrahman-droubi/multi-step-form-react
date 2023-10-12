@@ -1,0 +1,20 @@
+.thanksSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 75px 0px;
+  color: rgba(18, 51, 94, 255);
+  font-weight: 500;
+  font-size: 19px;
+  align-items: center;
+}
+
+.thanksSection img {
+  width: 90px;
+}
+.thanksSection div {
+  text-align: center;
+}
+.thanksSection > div > h1 {
+  margin-bottom: 10px;
+}

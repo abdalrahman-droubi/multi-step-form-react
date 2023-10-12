@@ -21,6 +21,11 @@
   border-radius: 10px;
   padding: 15px 25px;
 }
+.chexkBoxContainer.active {
+  background-color: rgba(248, 249, 254, 255);
+  border: 2px solid rgba(193, 188, 218, 255);
+  transform: scale(1.02);
+}
 
 .chexkBoxContainer > div {
   display: flex;
@@ -31,4 +36,8 @@
 }
 .chexkBoxContainer .description {
   color: #acadb3;
+}
+
+.chexkBoxContainer input[type="checkbox"] {
+  width: 13px;
 }
