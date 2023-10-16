@@ -26,6 +26,7 @@ function Step1({ personalInfo, setPersonalInfo, errors }) {
             className={errors.name ? "error" : ""}
             value={personalInfo.name}
             onChange={handleChange}
+            placeholder="e.g.Stephen King"
           />
         </div>
         {/* -------------------------------------------------------------------------- */}
@@ -41,6 +42,7 @@ function Step1({ personalInfo, setPersonalInfo, errors }) {
             className={errors.email ? "error" : ""}
             value={personalInfo?.email}
             onChange={handleChange}
+            placeholder="e.g.stephenking@lorem.com"
           />
         </div>
         {/* ----------------------------------------------------------------- */}
@@ -58,6 +60,7 @@ function Step1({ personalInfo, setPersonalInfo, errors }) {
             className={errors.phoneNumber ? "error" : ""}
             value={personalInfo?.phoneNumber}
             onChange={handleChange}
+            placeholder="e.g. +1 234 567 890"
           />
         </div>
       </form>

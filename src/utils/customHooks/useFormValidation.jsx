@@ -16,10 +16,9 @@ function useFormValidation(state, setState, validationRules) {
 
   const validateForm = () => {
     let newErrors = {};
-    for (const field in validationRules) {
+    for (const field in state) {
       const value = state[field];
       const rules = validationRules[field];
-
       for (const rule of rules) {
         if (rule.validator(value)) {
           break;
@@ -39,6 +38,7 @@ function useFormValidation(state, setState, validationRules) {
     errors,
     handleChange,
     validateForm,
+    setErrors,
   };
 }
 useFormValidation.propTypes = {

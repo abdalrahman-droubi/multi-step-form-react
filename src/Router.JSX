@@ -1,13 +1,24 @@
-import App from "./App";
+import Dashboard from "./pages/Dashboard";
+import SubscriptionForm from "./pages/SubscriptionForm";
 
 export const routes = [
   {
-    layout: "user",
+    layout: "subscriptionPage",
     pages: [
       {
-        name: "dd",
-        path: "/dd",
-        element: <App></App>,
+        name: "subscriptionFrom",
+        path: "/",
+        element: <SubscriptionForm />,
+      },
+    ],
+  },
+  {
+    layout: "dashboardPage",
+    pages: [
+      {
+        name: "subscriptionFrom",
+        path: "/dashboard",
+        element: <Dashboard />,
       },
     ],
   },

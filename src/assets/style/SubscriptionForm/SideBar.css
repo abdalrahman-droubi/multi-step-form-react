@@ -6,8 +6,11 @@
   /* height: 100%; */
   flex: 0 1 275px;
   padding: 35px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.SubscriptionPage_sideBar > .stepContainers {
+.SubscriptionPage_sideBar .stepContainers {
   margin-bottom: 30px;
   display: flex;
   align-items: center;

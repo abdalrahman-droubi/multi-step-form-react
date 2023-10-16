@@ -8,8 +8,8 @@ import Step1 from "../containers/SubscriptionForm/Step1";
 import Step2 from "../containers/SubscriptionForm/Step2";
 import Step3 from "../containers/SubscriptionForm/Step3";
 import Step4 from "../containers/SubscriptionForm/Step4";
-import { plansData } from "../assets/Data/planData";
 import Step5 from "../containers/SubscriptionForm/Step5";
+import { plansData } from "../assets/Data/planData";
 
 function SubscriptionForm() {
   const [activeStep, setActiveStep] = useState(0);
@@ -67,7 +67,7 @@ function SubscriptionForm() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
   return (
-    <div className="mainContainer">
+    <>
       <div className="SubscriptionPage_container">
         <SideBar activeStep={activeStep} />
         <div className="SubscriptionPage_formContainer">
@@ -100,12 +100,7 @@ function SubscriptionForm() {
               setActiveStep={setActiveStep}
             />
           )}
-          {activeStep === 4 && (
-            <Step5
-              subscriptionData={subscriptionData}
-              setActiveStep={setActiveStep}
-            />
-          )}
+          {activeStep === 4 && <Step5 />}
 
           <div className="buttonsContainer">
             {activeStep >= 0 && activeStep < 4 && (
@@ -124,7 +119,7 @@ function SubscriptionForm() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -3,3 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.mainContainer {
+  background-color: hsl(217, 100%, 97%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
