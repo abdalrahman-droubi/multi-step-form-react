@@ -24,7 +24,7 @@ Follow these steps to set up and run the project locally:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/multi-step-subscription-form.git
+   git clone https://github.com/abdalrahman-droubi/multi-step-form-react.git
    ```
 
 2. Navigate to the project directory:
