@@ -1,3 +1,4 @@
+import Login from "./containers/Dashboard/Login";
 import Dashboard from "./pages/Dashboard";
 import SubscriptionForm from "./pages/SubscriptionForm";
 
@@ -14,10 +15,11 @@ export const routes = [
   },
   {
     layout: "dashboardPage",
+    homePage: <Login />,
     pages: [
       {
         name: "subscriptionFrom",
-        path: "/dashboard",
+        path: "/dashboard/*subscriptionInfo",
         element: <Dashboard />,
       },
     ],
