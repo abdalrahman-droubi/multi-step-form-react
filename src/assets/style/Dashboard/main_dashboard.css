@@ -11,8 +11,14 @@ a {
 
 .mainContainer {
   background-color: hsl(217, 100%, 97%);
-  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LoginPage {
   height: 100vh;
+  flex: 0 1 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,14 +73,15 @@ a {
 }
 
 .subscriptionsTable_container {
+  display: block;
   font-family: Arial, sans-serif;
   color: #333;
   border: 1px solid #d1d5db;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: hsl(0, 0%, 100%);
   border-spacing: 0;
   border-collapse: collapse;
-  overflow: scroll;
+  overflow-x: scroll;
   font-size: 12px;
   font-weight: bold;
   margin-top: 20px;
@@ -82,10 +89,10 @@ a {
 .subscriptionsTable_container thead > tr {
   background-color: #f5f5f5;
 }
-.subscriptionsTable_container tbody > tr:nth-child(even) {
+.subscriptionsTable_container Wheat tbody > tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-.subscriptionsTable_container tbody > tr:hover {
+.subscriptionsTable_container Wheat tbody > tr:hover {
   background-color: #e0e0e0;
 }
 .subscriptionsTable_container th,
@@ -103,8 +110,16 @@ a {
 
 .dashboardContainer {
   flex: 1 0;
-  padding: 0 100px;
+  width: 100%;
+  padding: 0px 100px;
+  margin: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 900px) {
+  .subscriptionsTable_container {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main_dashboard.css.map */

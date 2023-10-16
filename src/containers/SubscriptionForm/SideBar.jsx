@@ -7,7 +7,7 @@ function SideBar({ activeStep }) {
 
   return (
     <section className="SubscriptionPage_sideBar">
-      <div>
+      <div className="stepsCon">
         {SideBarContent.map((step, index) => {
           return (
             <div key={index} className="stepContainers">
@@ -18,7 +18,7 @@ function SideBar({ activeStep }) {
               >
                 {index + 1}
               </span>
-              <div>
+              <div className="stepInfo">
                 <p className="stepNum">step {index + 1}</p>
                 <p className="stepName">{step}</p>
               </div>

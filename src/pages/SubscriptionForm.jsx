@@ -51,17 +51,17 @@ function SubscriptionForm() {
     data.push(subscriptionData);
     localStorage.setItem("data", JSON.stringify(data));
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setTimeout(() => {
-      setActiveStep(0);
-      setPersonalInfo({
-        name: "",
-        email: "",
-        phoneNumber: "",
-      });
-      setSubscriptionType("monthly");
-      setSlectedPlan(null);
-      setSelectedAddOns([]);
-    }, 3000);
+    // setTimeout(() => {
+    //   setActiveStep(0);
+    //   setPersonalInfo({
+    //     name: "",
+    //     email: "",
+    //     phoneNumber: "",
+    //   });
+    //   setSubscriptionType("monthly");
+    //   setSlectedPlan(null);
+    //   setSelectedAddOns([]);
+    // }, 3000);
   };
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);

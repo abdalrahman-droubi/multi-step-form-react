@@ -11,8 +11,6 @@ a {
 
 .mainContainer {
   background-color: hsl(217, 100%, 97%);
-  width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -307,8 +305,6 @@ a {
 .SubscriptionPage_container .SubscriptionPage_formContainer {
   margin: 0 auto;
   flex: 0 1 500px;
-  /* display: flex;
-    flex-direction: column; */
 }
 .SubscriptionPage_container .buttonsContainer {
   display: flex;
@@ -317,20 +313,65 @@ a {
 }
 
 @media (max-width: 500px) {
+  .mainContainer {
+    align-items: flex-start;
+  }
   .SubscriptionPage_container {
     height: auto;
     flex-wrap: wrap;
+    padding: 0;
+    background-color: hsl(217, 100%, 97%);
+    gap: 0;
+  }
+  .SubscriptionPage_container .buttonsContainer {
+    padding: 0 25px;
   }
   .SubscriptionPage_sideBar {
     background-image: url("../../images/bg-sidebar-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 25px;
-    /* height: 100%; */
-    flex: 0 1 275px;
-    padding: 35px 50px;
+    border-radius: 0;
+    height: 250px;
+    flex: 1;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .SubscriptionPage_sideBar .stepsCon {
     display: flex;
+    gap: 20px;
+  }
+  .SubscriptionPage_sideBar .stepInfo {
+    display: none;
+  }
+  .SubscriptionPage_sideBar .stepContainers .StepIcon {
+    font-size: 25px;
+    text-align: center;
+    padding: 15% 0;
+    width: 45px;
+  }
+  .personalInfoForm,
+  .addOnsForm,
+  .finishingUp,
+  .thanksSection {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25px;
+    padding: 45px 25px;
+    margin: 0 25px;
+    transform: translateY(-50px);
+  }
+  .selectPlanForm {
+    background-color: hsl(0, 0%, 100%);
+    padding: 45px 25px;
+    margin: 0 25px;
+    border-radius: 25px;
+    transform: translateY(-50px);
+  }
+  .selectPlanForm > .cardContainer {
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
+  }
+  .selectPlanForm > .cardContainer .planCard {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
   }
 }/*# sourceMappingURL=main_subscr.css.map */

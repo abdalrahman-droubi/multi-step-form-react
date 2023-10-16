@@ -32,45 +32,47 @@ function Login() {
   };
 
   return (
-    <form className="login_container" onSubmit={handleSubmit}>
-      <div className="card-header">
-        <h3>Log In</h3>
-      </div>
-      <div className="card-body">
-        <input
-          type="text"
-          name="email"
-          placeholder="Email"
-          onChange={handleChange}
-          value={adminData.email}
-        />
-        <input
-          type="password"
-          name="adminPassword"
-          placeholder="Password"
-          onChange={handleChange}
-          value={adminData.adminPassword}
-        />
-      </div>
-      <div className="card-footer">
-        <Button>Log In</Button>
-        {errors.email && (
-          <div className="alert">
-            <span>{errors.email}</span>
-          </div>
-        )}
-        {errors.adminPassword && (
-          <div className="alert">
-            <span>{errors.adminPassword}</span>
-          </div>
-        )}
-        {errors.notAuth && (
-          <div className="alert">
-            <span>{errors.notAuth}</span>
-          </div>
-        )}
-      </div>
-    </form>
+    <div className="LoginPage">
+      <form className="login_container" onSubmit={handleSubmit}>
+        <div className="card-header">
+          <h3>Log In</h3>
+        </div>
+        <div className="card-body">
+          <input
+            type="text"
+            name="email"
+            placeholder="Email"
+            onChange={handleChange}
+            value={adminData.email}
+          />
+          <input
+            type="password"
+            name="adminPassword"
+            placeholder="Password"
+            onChange={handleChange}
+            value={adminData.adminPassword}
+          />
+        </div>
+        <div className="card-footer">
+          <Button>Log In</Button>
+          {errors.email && (
+            <div className="alert">
+              <span>{errors.email}</span>
+            </div>
+          )}
+          {errors.adminPassword && (
+            <div className="alert">
+              <span>{errors.adminPassword}</span>
+            </div>
+          )}
+          {errors.notAuth && (
+            <div className="alert">
+              <span>{errors.notAuth}</span>
+            </div>
+          )}
+        </div>
+      </form>
+    </div>
   );
 }
 

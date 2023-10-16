@@ -1,5 +1,11 @@
 @use "../color_vars" as *;
-
+.LoginPage {
+  height: 100vh;
+  flex: 0 1 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .login_container {
   flex: 0 1 350px;
   background: #fff;
