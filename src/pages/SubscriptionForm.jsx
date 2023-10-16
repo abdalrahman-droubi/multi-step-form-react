@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../assets/style/SubscriptionForm/style.css";
+// import "../assets/style/SubscriptionForm/style.css";
 import { validationRules } from "../assets/Data/validationRules";
 import useFormValidation from "../utils/customHooks/useFormValidation";
 import Button from "../components/Button";

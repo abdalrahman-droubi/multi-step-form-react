@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import SubscriptionForm from "./pages/SubscriptionForm";
 import Dashboard from "./pages/Dashboard";
-import "./App.css";
 import Login from "./containers/Dashboard/Login";
+import "./assets/style/Dashboard/main_dashboard.css";
+import "./assets/style/SubscriptionForm/main_subscr.css";
 function App() {
   return (
     <div className="mainContainer">

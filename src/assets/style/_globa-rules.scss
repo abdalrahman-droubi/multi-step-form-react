@@ -1,0 +1,20 @@
+@use "./color_vars" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.mainContainer {
+  background-color: $Magnolia;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

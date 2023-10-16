@@ -1,6 +1,5 @@
 import Button from "../components/Button";
 import Table from "../containers/Dashboard/Table";
-import "../assets/style/Dashboard/style.css";
 import { useNavigate } from "react-router-dom";
 function Dashboard() {
   const navigate = useNavigate();

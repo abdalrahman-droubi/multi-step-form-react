@@ -1,0 +1,53 @@
+@use "../globa-rules";
+@use "../color_vars" as *;
+@use "./stepsHeader";
+@use "./Step1";
+@use "./Step2";
+@use "./Step3";
+@use "./Step4";
+@use "./Step5";
+@use "./SideBar";
+
+.SubscriptionPage_container {
+  width: 1440px;
+  height: 630px;
+  display: flex;
+  align-items: stretch;
+  background-color: white;
+  border-radius: 25px;
+  padding: 25px;
+  gap: 10px;
+
+  .SubscriptionPage_formContainer {
+    margin: 0 auto;
+    flex: 0 1 500px;
+    /* display: flex;
+      flex-direction: column; */
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 500px) {
+  .SubscriptionPage_container {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .SubscriptionPage_sideBar {
+    background-image: url("../../images/bg-sidebar-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    /* height: 100%; */
+    flex: 0 1 275px;
+    padding: 35px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

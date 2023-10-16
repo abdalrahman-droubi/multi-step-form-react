@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../../assets/style/Dashboard/Login.css";
 import Button from "../../components/Button";
 import useFormValidation from "../../utils/customHooks/useFormValidation";
 import { validationRules } from "../../assets/Data/validationRules";
@@ -33,7 +32,7 @@ function Login() {
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
+    <form className="login_container" onSubmit={handleSubmit}>
       <div className="card-header">
         <h3>Log In</h3>
       </div>

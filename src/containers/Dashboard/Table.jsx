@@ -1,10 +1,9 @@
 // import PropTypes from "prop-types";
-import "../../assets/style/Dashboard/Table.css";
 import { calculateTotal } from "../../utils/helpers/calculateTotalPrice";
 function Table() {
   const subscriptionsData = JSON.parse(localStorage.getItem("data")) || [];
   return (
-    <table className="subscriptionsTable">
+    <table className="subscriptionsTable_container">
       <thead>
         <tr>
           {[

@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.mainContainer {
+  background-color: hsl(217, 100%, 97%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formHeader > .formTitle {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.formHeader > p {
+  color: #acadb3;
+  font-weight: 600;
+}
+
+.personalInfoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 45px 0px;
+  color: rgb(18, 51, 94);
+  font-weight: 500;
+}
+.personalInfoForm form .formField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 25px;
+}
+.personalInfoForm form .formField > input {
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #182b44;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #dfdee2;
+  outline-color: hsl(229, 24%, 87%);
+}
+.personalInfoForm form .formField > .label {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.personalInfoForm form .formField > .label > p {
+  display: none;
+}
+.personalInfoForm form .formField > .label > .error {
+  display: block;
+  color: hsl(354, 84%, 57%);
+  flex: 0 1 50%;
+  text-align: end;
+}
+.personalInfoForm form .formField > input.error {
+  border-color: hsl(354, 84%, 57%);
+  outline-color: hsl(354, 84%, 57%);
+}
+
+.selectPlanForm {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 45px 0px;
+  color: rgb(18, 51, 94);
+  font-weight: 500;
+  font-size: 16px;
+}
+.selectPlanForm > .cardContainer {
+  display: flex;
+  gap: 20px;
+  color: rgb(18, 51, 94);
+}
+.selectPlanForm > .cardContainer .planCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 15px;
+  border: 1px solid #dfdee2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.selectPlanForm > .cardContainer .planCard.active {
+  background-color: rgb(248, 249, 254);
+  border: 1px solid rgb(193, 188, 218);
+  transform: scale(1.05);
+}
+.selectPlanForm > .cardContainer .planCard .cardinfo > .price {
+  color: #acadb3;
+  margin: 5px 0;
+}
+.selectPlanForm > .subscriptionType {
+  padding: 8px 0;
+  border-radius: 10px;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 100%, 97%);
+}
+.selectPlanForm > .subscriptionType .toggle > input[type=checkbox] {
+  height: 0;
+  width: 0;
+  display: none;
+}
+.selectPlanForm > .subscriptionType .toggle > label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: rgb(18, 51, 94);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin: 0 20px;
+}
+.selectPlanForm > .subscriptionType .toggle > label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.selectPlanForm > .subscriptionType .toggle > input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+.selectPlanForm > .subscriptionType .toggle > label:active:after {
+  width: 50px;
+}
+
+.addOnsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 45px 0px;
+  color: rgb(18, 51, 94);
+  font-weight: 500;
+  font-size: 16px;
+}
+.addOnsForm .checkBoxForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.addOnsForm .checkBoxForm .chexkBoxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #827db2;
+  border-radius: 10px;
+  padding: 15px 25px;
+}
+.addOnsForm .checkBoxForm .chexkBoxContainer.active {
+  background-color: rgb(248, 249, 254);
+  border: 2px solid rgb(193, 188, 218);
+  transform: scale(1.02);
+}
+.addOnsForm .checkBoxForm .chexkBoxContainer > div {
+  display: flex;
+  gap: 20px;
+}
+.addOnsForm .checkBoxForm .chexkBoxContainer h4 {
+  margin-bottom: 5px;
+}
+.addOnsForm .checkBoxForm .chexkBoxContainer .description {
+  color: #acadb3;
+}
+.addOnsForm .checkBoxForm .chexkBoxContainer input[type=checkbox] {
+  width: 13px;
+}
+
+.finishingUp {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 45px 0px;
+  color: rgb(18, 51, 94);
+  font-weight: 500;
+  font-size: 16px;
+}
+.finishingUp .billContainer > .billdetails {
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.finishingUp .billContainer > .billdetails > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.finishingUp .billContainer > .billdetails > .billPlan {
+  font-weight: 600;
+}
+.finishingUp .billContainer > .billdetails .ChangeOption {
+  display: inline-block;
+  color: #9898a2;
+  margin-top: 5px;
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
+  cursor: pointer;
+}
+.finishingUp .billContainer > .billdetails .billAddOns > .billAddOnsName {
+  color: #9898a2;
+}
+.finishingUp .billContainer .totalbill {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+.finishingUp .billContainer .totalbill > .total {
+  color: #4e48d1;
+  font-weight: 600;
+}
+
+.thanksSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 75px 0px;
+  color: rgb(18, 51, 94);
+  font-weight: 500;
+  font-size: 19px;
+  align-items: center;
+}
+.thanksSection img {
+  width: 90px;
+}
+.thanksSection div {
+  text-align: center;
+}
+.thanksSection > div > h1 {
+  margin-bottom: 10px;
+}
+
+.SubscriptionPage_sideBar {
+  background-image: url("../../images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  /* height: 100%; */
+  flex: 0 1 275px;
+  padding: 35px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.SubscriptionPage_sideBar .stepContainers {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  text-transform: uppercase;
+}
+.SubscriptionPage_sideBar .stepContainers .stepName {
+  font-weight: 700;
+}
+.SubscriptionPage_sideBar .stepContainers .StepIcon {
+  background-color: hsl(243, 100%, 62%);
+  border: 1px solid white;
+  border-radius: 100%;
+  font-size: 16px;
+  /* padding: 7px 0; */
+  text-align: center;
+  padding: 4% 0;
+  width: 35px;
+  /* flex: 0 0 39px; */
+}
+.SubscriptionPage_sideBar .stepContainers .StepIcon.active {
+  background-color: hsl(206, 94%, 87%);
+  color: rgb(18, 51, 94);
+  border: 1px solid hsl(243, 100%, 62%);
+}
+
+.SubscriptionPage_container {
+  width: 1440px;
+  height: 630px;
+  display: flex;
+  align-items: stretch;
+  background-color: white;
+  border-radius: 25px;
+  padding: 25px;
+  gap: 10px;
+}
+.SubscriptionPage_container .SubscriptionPage_formContainer {
+  margin: 0 auto;
+  flex: 0 1 500px;
+  /* display: flex;
+    flex-direction: column; */
+}
+.SubscriptionPage_container .buttonsContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+  .SubscriptionPage_container {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .SubscriptionPage_sideBar {
+    background-image: url("../../images/bg-sidebar-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    /* height: 100%; */
+    flex: 0 1 275px;
+    padding: 35px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=main_subscr.css.map */

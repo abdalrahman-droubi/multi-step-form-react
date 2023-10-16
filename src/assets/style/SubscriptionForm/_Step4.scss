@@ -1,0 +1,56 @@
+@use "../color_vars" as *;
+
+.finishingUp {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 45px 0px;
+  color: rgba(18, 51, 94, 255);
+  font-weight: 500;
+  font-size: 16px;
+
+  .billContainer {
+    > .billdetails {
+      background-color: $Magnolia;
+      border-radius: 10px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      > .billPlan {
+        font-weight: 600;
+      }
+
+      .ChangeOption {
+        display: inline-block;
+        color: #9898a2;
+        margin-top: 5px;
+        text-decoration: underline 2px;
+        cursor: pointer;
+      }
+      .billAddOns {
+        > .billAddOnsName {
+          color: #9898a2;
+        }
+      }
+    }
+
+    .totalbill {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px;
+
+      > .total {
+        color: #4e48d1;
+        font-weight: 600;
+      }
+    }
+  }
+}

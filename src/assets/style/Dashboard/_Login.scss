@@ -1,0 +1,60 @@
+@use "../color_vars" as *;
+
+.login_container {
+  flex: 0 1 350px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px $shadow;
+  padding: 20px;
+  color: rgba(18, 51, 94, 255);
+  font-weight: 500;
+
+  .card-header {
+    background: linear-gradient(
+      to left,
+      rgb(31 122 201),
+      rgba(18, 51, 94, 255)
+    );
+    color: $White;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 20px;
+    border-radius: 8px;
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input {
+      padding: 5px 10px;
+      font-size: 16px;
+      color: #182b44;
+      height: 45px;
+      border-radius: 5px;
+      border: 1px solid #dfdee2;
+      outline-color: $Light-gray;
+    }
+  }
+
+  .card-footer {
+    margin-top: 15px;
+
+    > button {
+      width: 100%;
+    }
+
+    .alert {
+      margin-top: 0.5rem;
+      background: linear-gradient(to right, $Strawberry-red, $Strawberry-red);
+      color: $White;
+      padding: 10px;
+      border-radius: 4px;
+    }
+  }
+}

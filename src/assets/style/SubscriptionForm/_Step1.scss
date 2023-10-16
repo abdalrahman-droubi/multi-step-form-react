@@ -1,0 +1,51 @@
+@use "../color_vars" as *;
+
+.personalInfoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 45px 0px;
+  color: rgba(18, 51, 94, 255);
+  font-weight: 500;
+
+  form {
+    .formField {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 25px;
+
+      > input {
+        padding: 5px 10px;
+        font-size: 16px;
+        color: #182b44;
+        height: 45px;
+        border-radius: 5px;
+        border: 1px solid #dfdee2;
+        outline-color: $Light-gray;
+      }
+
+      > .label {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        > p {
+          display: none;
+        }
+
+        > .error {
+          display: block;
+          color: $Strawberry-red;
+          flex: 0 1 50%;
+          text-align: end;
+        }
+      }
+
+      > input.error {
+        border-color: $Strawberry-red;
+        outline-color: $Strawberry-red;
+      }
+    }
+  }
+}

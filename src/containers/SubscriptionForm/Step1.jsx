@@ -1,4 +1,4 @@
-import "../../assets/style/SubscriptionForm/Step1.css";
+// import "../../assets/style/SubscriptionForm/Step1.css";
 import ProtoType from "prop-types";
 import useFormValidation from "../../utils/customHooks/useFormValidation";
 import StepsHeader from "../../components/StepsHeader";

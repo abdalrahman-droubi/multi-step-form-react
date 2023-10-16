@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "../../assets/style/SubscriptionForm/Step4.css";
+// import "../../assets/style/SubscriptionForm/Step4.css";
 import StepsHeader from "../../components/StepsHeader";
 import { calculateTotal } from "../../utils/helpers/calculateTotalPrice";
 

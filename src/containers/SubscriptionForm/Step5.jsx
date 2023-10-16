@@ -1,5 +1,5 @@
 // import PropTypes from "prop-types";
-import "../../assets/style/SubscriptionForm/Step5.css";
+// import "../../assets/style/SubscriptionForm/Step5.css";
 import thxIcon from "../../assets/images/icon-thank-you.svg";
 function Step5() {
   return (

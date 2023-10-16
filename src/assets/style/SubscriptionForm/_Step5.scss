@@ -1,3 +1,5 @@
+@use "../color_vars" as *;
+
 .thanksSection {
   display: flex;
   flex-direction: column;
@@ -7,14 +9,18 @@
   font-weight: 500;
   font-size: 19px;
   align-items: center;
-}
 
-.thanksSection img {
-  width: 90px;
-}
-.thanksSection div {
-  text-align: center;
-}
-.thanksSection > div > h1 {
-  margin-bottom: 10px;
+  img {
+    width: 90px;
+  }
+
+  div {
+    text-align: center;
+  }
+
+  > div {
+    > h1 {
+      margin-bottom: 10px;
+    }
+  }
 }

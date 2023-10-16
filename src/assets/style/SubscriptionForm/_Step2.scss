@@ -1,0 +1,95 @@
+@use "../color_vars" as *;
+
+.selectPlanForm {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 45px 0px;
+  color: rgba(18, 51, 94, 255);
+  font-weight: 500;
+  font-size: 16px;
+
+  > .cardContainer {
+    display: flex;
+    gap: 20px;
+    color: rgba(18, 51, 94, 255);
+
+    .planCard {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 15px;
+      border: 1px solid #dfdee2;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &.active {
+        background-color: rgba(248, 249, 254, 255);
+        border: 1px solid rgba(193, 188, 218, 255);
+        transform: scale(1.05);
+      }
+
+      .cardinfo {
+        > .price {
+          color: #acadb3;
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+
+  > .subscriptionType {
+    padding: 8px 0;
+    border-radius: 10px;
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    background-color: $Magnolia;
+
+    .toggle {
+      > input[type="checkbox"] {
+        height: 0;
+        width: 0;
+        display: none;
+      }
+
+      > label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 50px;
+        height: 25px;
+        background: rgba(18, 51, 94, 255);
+        display: block;
+        border-radius: 100px;
+        position: relative;
+        margin: 0 20px;
+      }
+
+      > label:after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 15px;
+        height: 15px;
+        background: $White;
+        border-radius: 90px;
+        transition: 0.3s;
+      }
+
+      > input:checked {
+        + label:after {
+          left: calc(100% - 5px);
+          transform: translateX(-100%);
+        }
+      }
+
+      > label:active:after {
+        width: 50px;
+      }
+    }
+  }
+}

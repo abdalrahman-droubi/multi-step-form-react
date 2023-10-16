@@ -1,4 +1,4 @@
-import "../../assets/style/SubscriptionForm/SideBar.css";
+// import "../../assets/style/SubscriptionForm/SideBar.css";
 import PropTypes from "prop-types";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
