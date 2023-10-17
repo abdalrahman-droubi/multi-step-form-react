@@ -7,7 +7,7 @@ export const routes = [
     layout: "subscriptionPage",
     pages: [
       {
-        name: "subscriptionFrom",
+        name: "subscriptionForm",
         path: "/",
         element: <SubscriptionForm />,
       },
@@ -18,8 +18,8 @@ export const routes = [
     homePage: <Login />,
     pages: [
       {
-        name: "subscriptionFrom",
-        path: "/dashboard/*subscriptionInfo",
+        name: "dashboardtable",
+        path: "subscriptionInfo",
         element: <Dashboard />,
       },
     ],
